@@ -80,3 +80,7 @@ password = "123456"
 role = "dev"
 
 ```
+
+```
+etcd --advertise-client-urls http://0.0.0.0:2379 --listen-peer-urls http://0.0.0.0:2379
+```
