@@ -1,19 +1,18 @@
 
+admin/123456
 
+```
+docker run -d --name etcd-web-ui -p 8383:10280 registry.cn-hangzhou.aliyuncs.com/cn_portainer/etcd-ui:latest sh
+docker exec -it etcd-web-ui sh
+vi /bin/config/cfg.tomy
+/bin/etcd-manage
+```
+或者
 ```
 vi bin/config/cfg.toml
 docker build -t etcd-ui .
 docker run -d --name etcd-web-ui  -p 8383:10280 etcd-ui
 https://IP:8383/ui
-
-admin/123456
-
-或者
-
-docker run -d --name etcd-web-ui  -p 8383:10280 etcd-ui sh
-docker exec -it etcd-web-ui sh
-vi /bin/config/cfg.tomy
-/bin/etcd-manage
 ```
 
 
