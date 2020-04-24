@@ -2,10 +2,11 @@
 admin/123456
 
 ```
-docker run -d --name etcd-web-ui -p 8383:10280 registry.cn-hangzhou.aliyuncs.com/cn_portainer/etcd-ui:latest sh
+docker run -d --name etcd-web-ui -p 8383:10280 registry.cn-hangzhou.aliyuncs.com/cn_portainer/etcd-ui:latest
 docker exec -it etcd-web-ui sh
 vi /bin/config/cfg.tomy
-/bin/etcd-manage
+
+docker restart etcd-web-ui
 ```
 或者
 ```
